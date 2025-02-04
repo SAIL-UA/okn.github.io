@@ -11,27 +11,19 @@ nav:
   - title: "Home"
     url: "/"
     nav_order: 1
-  - title: "Installation"
-    url: "/installation"
+  - title: "PDF Parsing"
+    url: "/pdf-parsing"
     nav_order: 2
-  - title: "Data Load"
-    url: "/data-load"
+  - title: "Ontology Construction"
+    url: "/ontology-construction"
     nav_order: 3
-  - title: "Generate Feature Matrix"
-    url: "/generate-feature-matrix"
+  - title: "Knowledge Graph Database"
+    url: "/knowledge-graph-database"
     nav_order: 4
-  - title: "Get Label"
-    url: "/get-label"
+  - title: "User Interface"
+    url: "/user-interface"
     nav_order: 5
-  - title: "Train Model"
-    url: "/train-model"
-    nav_order: 6
-  - title: "Feature Importance Analysis"
-    url: "/feature-importance-analysis"
-    nav_order: 7
-  - title: "t-SNE Visualization"
-    url: "/tsne-visualization"
-    nav_order: 8
   - title: "Our Team"
     url: "/our-team"
-    nav_order: 9
+    nav_order: 6
+
