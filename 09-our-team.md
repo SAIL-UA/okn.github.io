@@ -4,7 +4,7 @@ title: "Our Team"
 nav_order: 9
 ---
 
-Meet the members of our team contributing to this LEAP dataset.
+Meet the members of our team contributing to this RuralKG dataset.
 
 ## Team Members
 
@@ -18,7 +18,9 @@ Meet the members of our team contributing to this LEAP dataset.
 - PhD Student
 - xzhu39@crimson.ua.edu
 
-### Joe M. Hart 
-- University of North Carolina 
-- Professor
-- joe_hart@med.unc.edu
+### Xiaoming Guo
+- University of Alabama
+- PhD Student
+- xguo29@crimson.ua.edu
+
+
