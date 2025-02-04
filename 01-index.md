@@ -5,38 +5,35 @@ nav_order: 1
 permalink: /
 ---
 
-# Introduction 
-Enhancing the resilience of our nation’s rural communities to existing and upcoming crises is of
-pressing importance, as these areas are vital for preserving essential resources such as air quality,
-water supplies, food production, and supply chains - a realization underscored by the CoVID19 pandemic. Following our preliminary work, we have pinpointed collaborators and mapped
-out the capabilities required for rural resilience, particularly in the context of public health and
-environmental crises. Central to these requirements of resources and community collaborations is
-the ability to collect and analyze data related to health outcomes and climate changes, along with
-social determinants of health and justice within rural locales.
-Therefore, we have put together a specialized team that’s dedicated to overcoming difficulties
-in data gathering and analysis. The method involves the construction of an extensive, interdisciplinary knowledge graph. This graph is designed to merge, portray, and interconnect previously
-separate health and justice data sets. It’s a powerful resource designed to aid researchers, practitioners, and educators in improving their understanding of risk environments in rural locations and
-strengthening their resilience. The project’s goal is to make use of existing geo-enrichment services
-and initiatives like the NSF-funded KnowWhereGraph. The team is devoted to synchronizing our
-efforts with these programs, as well as other Proto-OKN themes, in order to enhance our scientific
-studies of rural resilience to public health and environmental crises.
+# RuralKG Dataset
+
+RuralKG is a hierarchical dataset generated from multiple federal sources (e.g., NSDUH, NIBRS, TEDS-A/D) and focuses on substance abuse, mental health, and justice in rural areas. It provides a complete data processing pipeline—from raw data extraction to the deployment of a retrieval-augmented generation (RAG) system—making it a robust resource for researchers, practitioners, and educators.
 
 ## Project Overview
 
-![Project overview diagram](media/overview1.png)
+RuralKG’s layered architecture comprises several key stages:
 
+1. **Extended CSV Generation:**  
+   Raw data from federal codebooks (e.g., NSDUH) is processed into an extended CSV format, capturing rich, structured information.
+
+2. **Ontology & Knowledge Graph Construction:**  
+   The CSV data is used to build an ontology and a comprehensive knowledge graph that interconnects disparate data sources.
+
+3. **Database Integration:**  
+   Leveraging the knowledge graph, a relational database is constructed to manage both intermediate and final data effectively.
+
+4. **RAG System Deployment:**  
+   All the processed materials support a retrieval-augmented generation system, facilitating intelligent query responses and data exploration for both academic research and public service applications.
+
+*Figure: A layered diagram illustrating the RuralKG dataset pipeline will be inserted here.*
 
 ## Alpha Version Demo
 
 An alpha version of the RuralKG Web Service is available at [RuralKG Web Service](http://52.170.155.134:8050/).
 
-In this version, you can explore:
-- **Knowledge queries** for dataset background information,
-- **Data queries** on substances and substance-related data, and
-- **Service queries** for Mental Health Treatment Facilities provided by SAMHSA.
+In this demo, you can explore:
+- **Knowledge Queries:** Retrieve background information and insights about the dataset components.
+- **Data Queries:** Access detailed data on substances and related metrics.
+- **Service Queries:** Find mental health treatment facilities and other public service providers in rural areas.
 
-Test cases can be accessed at [RuralKG Test Cases](data/test_case.csv). Note that some queries may appear unusual as they are designed to test the boundaries of the system’s capabilities.
-
-
-
-
+Test cases and further documentation are available at [RuralKG Test Cases](data/test_case.csv).
