@@ -18,7 +18,7 @@ Instead of a single dataset, RuralKG is dedicated to providing reliable and reus
 
    The scripts and methods for the extended CSV generation are available at [02-pdf-parsing](02-pdf-parsing.md).
 
-   One generated extended CSV file for NSDUH 2022 codebook is available at [data/ndsuh_2022_codebook.csv](data/ndsuh_2022_codebook.csv).
+   One generated extended CSV file for NSDUH 2022 codebook is available at [ndsuh_2022_codebook.csv](data/nsduh_2022_codebook.csv).
 
 2. **Ontology & Knowledge Graph Construction:**  
    The CSV data is used to build an ontology and a comprehensive knowledge graph that interconnects disparate data sources.
