@@ -11,10 +11,14 @@ RuralKG is a hierarchical dataset generated from multiple federal sources (e.g.,
 
 ## Project Overview
 
-RuralKG’s layered architecture comprises several key stages:
+Instead of a single dataset, RuralKG is dedicated to providing reliable and reusable datasets for all the components of the RuralKG pipeline. Datasets from different layers represent different aspects and readiness of the knowledge representation.
 
 1. **Extended CSV Generation:**  
-   Raw data from federal codebooks (e.g., NSDUH) is processed into an extended CSV format, capturing rich, structured information.
+   Raw data from federal codebooks (e.g., NSDUH) is processed into an extended CSV format, capturing rich, structured information. This approach utilizes the structure of the codebooks that the most vital variable section in the codebook is organized in a table-like pattern.
+
+   The scripts and methods for the extended CSV generation are available at [02-pdf-to-csv](02-pdf-to-csv.md).
+
+   One generated extended CSV file for NSDUH 2022 codebook is available at [data/NSDUH_2022_codebook.csv](data/NSDUH_2022_codebook.csv).
 
 2. **Ontology & Knowledge Graph Construction:**  
    The CSV data is used to build an ontology and a comprehensive knowledge graph that interconnects disparate data sources.
