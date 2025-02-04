@@ -25,7 +25,7 @@ RuralKG’s layered architecture comprises several key stages:
 4. **RAG System Deployment:**  
    All the processed materials support a retrieval-augmented generation system, facilitating intelligent query responses and data exploration for both academic research and public service applications.
 
-*Figure: A layered diagram illustrating the RuralKG dataset pipeline will be inserted here.*
+![Project overview diagram](media/DCL.png)
 
 ## Alpha Version Demo
 
