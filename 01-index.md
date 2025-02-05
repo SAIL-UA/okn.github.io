@@ -9,74 +9,56 @@ permalink: /
 
 RuralKG is a hierarchical data repository and knowledgbase generated from multiple federal sources (e.g., NSDUH, NIBRS, TEDS-A/D). It focuses on improving our understanding of risk environments (e.g., substance abuse, mental health crisis, and social justice) in the United States' rural communities and strengthening their resilience. It provides a complete data processing pipeline—from raw data extraction to deploying a retrieval-augmented generation (RAG) system—making it a robust resource for researchers, practitioners, and educators.
 
-RuralKG is part of the Proto-OKN project, which is supported by the National Science Foundation (NSF) under grant number 2333836. This is a project undergoing so RuralKG is still evolving. The current update pace is twice per quarter.
+RuralKG is part of the Proto-OKN project, supported by the National Science Foundation (NSF) under grant number 2333836. As an evolving project, RuralKG is updated twice per quarter.
 
 ## Target Audience
-Beginners: Students and researchers who are new to the Knowledge Graph, Retrieval-Augmented Generation (RAG), and the social determinants of health and justice.
 
-Intermediates: Practitioners who have some experience with one or more components of the knowledge graph and retrieval-augmented generation.
+**Beginners:**  
+Students and researchers new to knowledge graphs, retrieval-augmented generation (RAG), and the social determinants of health and justice.  
+- **Use Case:** Extract entities and relationships from the extended CSV (derived from federal codebooks like NSDUH) to build a basic ontology and knowledge graph, and experiment with vector databases and indexing methods.
 
-Advanced Users: Researchers who are familiar with the knowledge graph and retrieval-augmented generation and want to use RuralKG for their work.
+**Intermediates:**  
+Practitioners with some experience in knowledge graphs and RAG systems.  
+- **Use Case:** Construct and enrich the knowledge graph from raw data, build a RAG system using a PostgreSQL database that stores the KG and auxiliary data, and leverage the KG to regulate the RAG process.
 
-Here are use cases for the target audience at different stages of their journey:
-
-For Beginners: 
-- Extract entities and relationships from the extended CSV file provided by RuralKG. The extended CSV file is the list of variables and their answer options in the codebook. In NSDUH, variables represent the questions in the survey. In the TSV format dataset provided by NSDUH, each row represents a respondent's answer to a question and each column represents a variable (question).
-- Build ontology and knowledge graph based on the extracted entities and relationships.
-- Build vector database to store the knowledge graph and auxiliary information, test different indexing methods and the traditional embedding based retrieval.
-
-For Intermediates:
-- Contruct the knowledge graph from the raw data. Enrich the knowledge graph with data from other sources.
-- Build a RAG system using the PostgreSQL database in which the knowledge graph and auxiliary information are stored in the tables.
-- Use the KG to regulate the RAG system.
-
-For Advanced Users:
-- Generate the knowledge graph and RAG system from the raw data using their own methods.
-- Focus on the KG quality and conduct comprehensive evaluation.
-- Deliver insights of the domain, instead of continuing the data processing pipeline. Try to find the potential research gaps and conduct social determinants analysis.
-
+**Advanced Users:**  
+Researchers familiar with knowledge graphs and RAG who aim to develop custom methodologies.  
+- **Use Case:** Generate a custom knowledge graph and RAG system from raw data, conduct comprehensive evaluations of KG quality, derive domain insights, and identify research gaps in social determinants analysis.
 
 ## Project Overview
 
-Instead of a single dataset, RuralKG is dedicated to providing reliable and reusable datasets for all the components of the RuralKG pipeline. Datasets from different layers represent different aspects and readiness of the knowledge representation.
+RuralKG is designed as a layered ecosystem, offering reusable datasets for every stage of the data processing pipeline:
 
-1. **Extended Variable List:**  
-   Raw data from federal codebooks (e.g., NSDUH) is processed into an extended CSV format, capturing rich, structured information. This approach utilizes the structure of the codebooks that the most vital variable section in the codebook is organized in a table-like pattern.
+1. **Extended Variable List**  
+   - **What:** Raw data from federal codebooks (e.g., NSDUH) is processed into an extended CSV format that captures detailed, structured information.
+   - **Resources:**  
+     - [CSV Generation Scripts & Methods](02-beginner-pdf-parsing.md)  
+     - Example: [NSDUH 2022 Codebook CSV](data/nsduh_2022_codebook.csv)
 
-   The scripts and methods for the extended CSV generation are available at [beginner-pdf-parsing](02-beginner-pdf-parsing.md).
+2. **Ontology & Knowledge Graph**  
+   - **What:** The extended CSV is used to construct an ontology and a comprehensive knowledge graph that interconnects disparate data sources.
+   - **Resources:**  
+     - [Ontology & KG Construction Scripts & Methods](03-ontology-construction.md)  
+     - Download the current TTL version: [RuralKG TTL](data/rural_kg.ttl)  
+     - For Neo4j users: [RuralKG Neo4j Seed](data/nsduh.dump)
 
-   One generated extended CSV file for NSDUH 2022 codebook is available at [ndsuh_2022_codebook.csv](data/nsduh_2022_codebook.csv).
+3. **Database Integration**  
+   - **What:** A relational database is employed to effectively manage heterogeneous data sources, supporting both intermediate and final data for advanced analyses.
+   - **Resources:**  
+     - [Database Integration Scripts & Methods](04-advanced-knowledge-graph-database.md)
 
-2. **Ontology & Knowledge Graph:**  
-   The CSV data is used to build an ontology and a comprehensive knowledge graph that interconnects disparate data sources. 
-
-   The scripts and methods for the ontology and knowledge graph construction are available at [03-ontology-construction](03-intermediate-ontology-construction.md).
-
-   The generated RuralKG is submitted to the FRINK platform for the public use. You can find the RuralKG on the FRINK platform at [Query on FRINK]()
-
-   You can also download the current TTL version of RuralKG from this maintained link [RuralKG](data/rural_kg.ttl).
-
-   For users who prefer to use Neo4j, instead of RDF format and SPARQL queries, the Neo4j database dump for the seed ontology can be found at [RuralKG Neo4j Seed](data/nsduh.dump). This seed ontology is not complete, but it can be used as a starting point for building a knowledge graph.
-
-3. **Database Integration:**  
-   Since heterogeneous data sources are involved for providing comprehensive contextual information, a relational database is used to manage both intermediate and final data effectively. 
-
-   The RuralKG database provides a comprehensive data infrastructure for advanced users to build kinds of systems, including RAG, data mining, and social determinants analysis.
-
-   The scripts and methods for the database integration are available at [04-advanced-knowledge-graph-database](04-advanced-knowledge-graph-database.md).
-
-4. **RAG System Deployment:**  
-   All the processed materials support a retrieval-augmented generation system, facilitating intelligent query responses and data exploration for both academic research and public service applications.
-
-![Project overview diagram](media/DCL.png)
+4. **RAG System Deployment**  
+   - **What:** All processed materials feed into a retrieval-augmented generation system, enabling intelligent query responses and data exploration for both academic research and public service applications.
+   - **Visual Overview:**  
+     ![Project overview diagram](media/DCL.png)
 
 ## Alpha Version Demo
 
 An alpha version of the RuralKG Web Service is available at [RuralKG Web Service](http://52.170.155.134:8050/).
 
 In this demo, you can explore:
-- **Knowledge Queries:** Retrieve background information and insights about the dataset components.
+- **Knowledge Queries:** Retrieve background information and insights from the dataset.
 - **Data Queries:** Access detailed data on substances and related metrics.
-- **Service Queries:** Find mental health treatment facilities and other public service providers in rural areas.
+- **Service Queries:** Locate mental health treatment facilities and other public service providers in rural areas.
 
-Test cases and further documentation are available at [RuralKG Test Cases](data/test_case.csv).
+Test cases and further documentation can be accessed at [RuralKG Test Cases](data/test_case.csv).
