@@ -1,6 +1,9 @@
-title: Open Knowledge Graph - Rural Ontology
-description: This is the documentation site for the rural okn project.
-url: "https://sail-ua.github.io/okn-page/"
+title: RuralKG Dataset for Substance Abuse, Mental Health, and Justice in Rural America
+
+description: This is the documentation site for RuralKG Dataset for Substance Abuse, Mental Health, and Justice in Rural America
+
+url: "https://sail-ua.github.io/okn.github.io/"
+
 remote_theme: https://github.com/JV-conseil/jekyll-theme-read-the-docs
 
 # Sidebar navigation structure
@@ -9,21 +12,18 @@ nav:
     url: "/"
     nav_order: 1
   - title: "PDF Parsing"
-    url: "/pdf-parsing"
+    url: "/beginner-pdf_parsing"
     nav_order: 2
   - title: "Ontology Construction"
-    url: "/ontology-construction"
+    url: "/intermediate-ontology-construction"
     nav_order: 3
   - title: "Knowledge Graph Database"
-    url: "/knowledge-graph-database"
+    url: "/advanced-knowledge-graph-database"
     nav_order: 4
   - title: "User Interface"
     url: "/user-interface"
     nav_order: 5
-  - title: "Meet Our Team"
-    url: "/team"
+  - title: "Our Team"
+    url: "/our-team"
     nav_order: 6
-  - title: "Dissemination"
-    url: "/dissemination"
-    nav_order: 7
 
