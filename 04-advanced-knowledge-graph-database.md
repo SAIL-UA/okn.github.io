@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Knowledge Graph Database"
+title: "For Advanced Users: Knowledge Graph Database"
 nav_order: 4
 ---
 

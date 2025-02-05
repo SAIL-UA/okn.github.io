@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Ontology Construction"
+title: "For Intermediates: Ontology Construction"
 nav_order: 3
 ---
 
