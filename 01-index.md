@@ -52,7 +52,7 @@ Instead of a single dataset, RuralKG is dedicated to providing reliable and reus
 
    The scripts and methods for the ontology and knowledge graph construction are available at [03-ontology-construction](03-intermediate-ontology-construction.md).
 
-   The generated RuralKG is submitted to the FRINK platform for the public use. You can find the RuralKG on the FRINK platform at [Query on FRINK](https://frink.apps.renci.org/?query=PREFIX+rdf:+%3Chttp://www.w3.org/1999/02/22-rdf-syntax-ns%23%3E%0APREFIX+rdfs:+%3Chttp://www.w3.org/2000/01/rdf-schema%23%3E%0ASELECT+*+WHERE+{%0A++?sub+?pred+?obj+.%0A}+LIMIT+10&sources=federation).
+   The generated RuralKG is submitted to the FRINK platform for the public use. You can find the RuralKG on the FRINK platform at [Query on FRINK]()
 
    You can also download the current TTL version of RuralKG from this maintained link [RuralKG](data/rural_kg.ttl).
 
