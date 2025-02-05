@@ -46,11 +46,15 @@ RuralKG is designed as a layered ecosystem, offering reusable datasets for every
    - **What:** A relational database is employed to effectively manage heterogeneous data sources, supporting both intermediate and final data for advanced analyses.
    - **Resources:**  
      - [Database Integration Scripts & Methods](04-advanced-knowledge-graph-database.md)
+     - PostgreSQL database dump: [RuralKG PostgreSQL](data/okndb0123.tar)
 
 4. **RAG System Deployment**  
    - **What:** All processed materials feed into a retrieval-augmented generation system, enabling intelligent query responses and data exploration for both academic research and public service applications.
    - **Visual Overview:**  
-     ![Project overview diagram](media/DCL.png)
+
+### Project Overview Diagram
+
+![Project overview diagram](media/DCL.png)
 
 ## Alpha Version Demo
 
