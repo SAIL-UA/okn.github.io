@@ -6,7 +6,13 @@ nav_order: 2
 
 # PDF Table Parser
 
-This project’s aim is to process each dataset’s documentation (i.e., usually termed the codebook or data dictionary) to parse out each variable in the dataset’s description, their possible answer categories/codes, and each code’s meaning.
+For beginners on Knowledge Graph and RAG, PDF processing can be a good starting point. Considering the complexity of PDF processing, well-organized CSV files that are extracted from PDFs can serve as the basis of the training of entity/relation extraction tasks directly.
+
+We encourage beginners to try the following steps to process each dataset’s documentation (i.e., usually termed the codebook or data dictionary) to parse out each variable in the dataset’s description, their possible answer categories/codes, and each code’s meaning. As the emerging multi-modal LLMs are getting more powerful, we also encourage beginners to try the SOTA multi-modal LLMs to process the PDFs and extract the information. However, this section still provides a step-by-step guide to process the PDFs and extract the information.
+
+As aformentioned, if you are not interested in this PDF processing, you can directly download the well-organized CSV files: [NSDUH 2022 Variable List CSV](data/nsduh_2022_codebook.csv)
+
+This section's aim is to process each dataset’s documentation (i.e., usually termed the codebook or data dictionary) to parse out each variable in the dataset’s description, their possible answer categories/codes, and each code’s meaning.
 
 ## Table Extraction from PDF Pages into CSVs
 

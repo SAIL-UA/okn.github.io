@@ -22,7 +22,7 @@ Practitioners with some experience in knowledge graphs and RAG systems.
 - **Use Case:** Construct and enrich the knowledge graph from raw data, build a RAG system using a PostgreSQL database that stores the KG and auxiliary data, and leverage the KG to regulate the RAG process.
 
 **Advanced Users:**  
-Researchers familiar with knowledge graphs and RAG who aim to develop custom methodologies.  
+Researchers familiar with knowledge graphs and RAG who aim to develop custom methodologies, evaluate the quality of the knowledge graph, and derive domain insights.
 - **Use Case:** Generate a custom knowledge graph and RAG system from raw data, conduct comprehensive evaluations of KG quality, derive domain insights, and identify research gaps in social determinants analysis.
 
 ## Project Overview
@@ -49,8 +49,8 @@ RuralKG is designed as a layered ecosystem, offering reusable datasets for every
      - PostgreSQL database dump: [RuralKG PostgreSQL](data/okndb0123.tar)
 
 4. **RAG System Deployment**  
-   - **What:** All processed materials feed into a retrieval-augmented generation system, enabling intelligent query responses and data exploration for both academic research and public service applications.
-   - **Visual Overview:**  
+   - **What:** All processed materials serve as foundational data for a retrieval-augmented generation system, enabling intelligent query responses and data exploration for both academic research and public service applications.
+
 
 ### Project Overview Diagram
 
