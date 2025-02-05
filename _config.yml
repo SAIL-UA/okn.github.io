@@ -12,13 +12,13 @@ nav:
     url: "/"
     nav_order: 1
   - title: "PDF Parsing"
-    url: "/beginner-pdf-parsing"
+    url: "/beginner"
     nav_order: 2
   - title: "Ontology Construction"
-    url: "/intermediate-ontology-construction"
+    url: "/intermediate-user"
     nav_order: 3
   - title: "Knowledge Graph Database"
-    url: "/advanced-knowledge-graph-database"
+    url: "/advanced-user"
     nav_order: 4
   - title: "User Interface"
     url: "/user-interface"
