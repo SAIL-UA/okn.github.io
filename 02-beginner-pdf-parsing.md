@@ -4,13 +4,26 @@ title: "For Beginners: PDF Parsing"
 nav_order: 2
 ---
 
-# PDF Table Parser
+# For Beginners: PDF Parsing
 
-For beginners on Knowledge Graph and RAG, PDF processing can be a good starting point. Considering the complexity of PDF processing, well-organized CSV files that are extracted from PDFs can serve as the basis of the training of entity/relation extraction tasks directly.
+This guide is designed for newcomers to Knowledge Graphs and Retrieval-Augmented Generation (RAG). PDF processing can be challenging, so we start by converting complex codebooks or data dictionaries into well-organized CSV files. These CSVs serve as the foundation for the entity and relation extraction tasks.
 
-We encourage beginners to try the following steps to process each dataset’s documentation (i.e., usually termed the codebook or data dictionary) to parse out each variable in the dataset’s description, their possible answer categories/codes, and each code’s meaning. As the emerging multi-modal LLMs are getting more powerful, we also encourage beginners to try the SOTA multi-modal LLMs to process the PDFs and extract the information. However, this section still provides a step-by-step guide to process the PDFs and extract the information.
+If you prefer to skip the PDF processing steps, you can directly download the ready-made CSV file: [NSDUH 2022 Variable List CSV](data/nsduh_2022_codebook.csv).
 
-As aformentioned, if you are not interested in this PDF processing, you can directly download the well-organized CSV files: [NSDUH 2022 Variable List CSV](data/nsduh_2022_codebook.csv)
+## Why Use the Extended Variable List?
+
+The Extended Variable List is a structured CSV file containing six key columns:
+- **Question_Code:** Unique code for each survey question (matches the header in the TSV dataset).
+- **Question_Content:** Brief description of the survey question.
+- **Related_Variables:** Other variables related to this question.
+- **Answer_code:** Numeric code representing possible responses (e.g., 1 for "Yes", 2 for "No", 7 for "Don't know", 9 for "Refused").
+- **Answer_meaning:** Explanation of each answer code.
+- **Long_Description:** A detailed description of the question, providing additional context.
+
+This CSV forms the basis for extracting entities and relations using zero-shot or few-shot prompting with multi-modal LLMs. Although the initial extraction may require refinement, it’s an excellent starting point for building a robust knowledge graph.
+
+
+# PDF Table Parser: Step-by-Step Guide
 
 This section's aim is to process each dataset’s documentation (i.e., usually termed the codebook or data dictionary) to parse out each variable in the dataset’s description, their possible answer categories/codes, and each code’s meaning.
 
