@@ -7,7 +7,9 @@ permalink: /
 
 # RuralKG Dataset
 
-RuralKG is a hierarchical dataset generated from multiple federal sources (e.g., NSDUH, NIBRS, TEDS-A/D) and focuses on substance abuse, mental health, and justice in rural areas. It provides a complete data processing pipeline—from raw data extraction to the deployment of a retrieval-augmented generation (RAG) system—making it a robust resource for researchers, practitioners, and educators.
+RuralKG is a hierarchical data repository and knowledgbase generated from multiple federal sources (e.g., NSDUH, NIBRS, TEDS-A/D). It focuses on improving our understanding of risk environments (e.g., substance abuse, mental health crisis, and social justice) in the United States' rural communities and strengthening their resilience. It provides a complete data processing pipeline—from raw data extraction to deploying a retrieval-augmented generation (RAG) system—making it a robust resource for researchers, practitioners, and educators.
+
+RuralKG is part of the Proto-OKN project, which is supported by the National Science Foundation (NSF) under grant number 2333836. This is a project undergoing so RuralKG is still evolving. The current update pace is twice per quarter.
 
 ## Project Overview
 
@@ -21,7 +23,7 @@ Instead of a single dataset, RuralKG is dedicated to providing reliable and reus
    One generated extended CSV file for NSDUH 2022 codebook is available at [ndsuh_2022_codebook.csv](data/nsduh_2022_codebook.csv).
 
 2. **Ontology & Knowledge Graph Construction:**  
-   The CSV data is used to build an ontology and a comprehensive knowledge graph that interconnects disparate data sources.
+   The CSV data is used to build an ontology and a comprehensive knowledge graph that interconnects disparate data sources. 
 
 3. **Database Integration:**  
    Leveraging the knowledge graph, a relational database is constructed to manage both intermediate and final data effectively.
