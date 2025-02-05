@@ -59,7 +59,11 @@ Instead of a single dataset, RuralKG is dedicated to providing reliable and reus
    For users who prefer to use Neo4j, instead of RDF format and SPARQL queries, the Neo4j database dump for the seed ontology can be found at [RuralKG Neo4j Seed](data/nsduh.dump). This seed ontology is not complete, but it can be used as a starting point for building a knowledge graph.
 
 3. **Database Integration:**  
-   Leveraging the knowledge graph, a relational database is constructed to manage both intermediate and final data effectively.
+   Since heterogeneous data sources are involved for providing comprehensive contextual information, a relational database is used to manage both intermediate and final data effectively. 
+
+   The RuralKG database provides a comprehensive data infrastructure for advanced users to build kinds of systems, including RAG, data mining, and social determinants analysis.
+
+   The scripts and methods for the database integration are available at [04-advanced-knowledge-graph-database](04-advanced-knowledge-graph-database.md).
 
 4. **RAG System Deployment:**  
    All the processed materials support a retrieval-augmented generation system, facilitating intelligent query responses and data exploration for both academic research and public service applications.
