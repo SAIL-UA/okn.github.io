@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "PDF Parsing"
+title: "For Beginners: PDF Parsing"
 nav_order: 2
 ---
 
