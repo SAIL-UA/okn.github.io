@@ -1,42 +1,82 @@
 ---
 layout: default
-title: "OKN-UA Project"
+title: "RuralKG Dataset"
 nav_order: 1
 permalink: /
 ---
 
-# Introduction 
-Enhancing the resilience of our nation’s rural communities to existing and upcoming crises is of
-pressing importance, as these areas are vital for preserving essential resources such as air quality,
-water supplies, food production, and supply chains - a realization underscored by the CoVID19 pandemic. Following our preliminary work, we have pinpointed collaborators and mapped
-out the capabilities required for rural resilience, particularly in the context of public health and
-environmental crises. Central to these requirements of resources and community collaborations is
-the ability to collect and analyze data related to health outcomes and climate changes, along with
-social determinants of health and justice within rural locales.
-Therefore, we have put together a specialized team that’s dedicated to overcoming difficulties
-in data gathering and analysis. The method involves the construction of an extensive, interdisciplinary knowledge graph. This graph is designed to merge, portray, and interconnect previously
-separate health and justice data sets. It’s a powerful resource designed to aid researchers, practitioners, and educators in improving their understanding of risk environments in rural locations and
-strengthening their resilience. The project’s goal is to make use of existing geo-enrichment services
-and initiatives like the NSF-funded KnowWhereGraph. The team is devoted to synchronizing our
-efforts with these programs, as well as other Proto-OKN themes, in order to enhance our scientific
-studies of rural resilience to public health and environmental crises.
+# RuralKG Dataset
+
+RuralKG is a hierarchical data repository and knowledgbase generated from multiple federal sources (e.g., NSDUH, NIBRS, TEDS-A/D). It focuses on improving our understanding of risk environments (e.g., substance abuse, mental health crisis, and social justice) in the United States' rural communities and strengthening their resilience. It provides a complete data processing pipeline—from raw data extraction to deploying a retrieval-augmented generation (RAG) system—making it a robust resource for researchers, practitioners, and educators.
+
+RuralKG is part of the Proto-OKN project, which is supported by the National Science Foundation (NSF) under grant number 2333836. This is a project undergoing so RuralKG is still evolving. The current update pace is twice per quarter.
+
+## Target Audience
+Beginners: Students and researchers who are new to the Knowledge Graph, Retrieval-Augmented Generation (RAG), and the social determinants of health and justice.
+
+Intermediates: Practitioners who have some experience with one or more components of the knowledge graph and retrieval-augmented generation.
+
+Advanced Users: Researchers who are familiar with the knowledge graph and retrieval-augmented generation and want to use RuralKG for their work.
+
+Here are use cases for the target audience at different stages of their journey:
+
+For Beginners: 
+- Extract entities and relationships from the extended CSV file provided by RuralKG. The extended CSV file is the list of variables and their answer options in the codebook. In NSDUH, variables represent the questions in the survey. In the TSV format dataset provided by NSDUH, each row represents a respondent's answer to a question and each column represents a variable (question).
+- Build ontology and knowledge graph based on the extracted entities and relationships.
+- Build vector database to store the knowledge graph and auxiliary information, test different indexing methods and the traditional embedding based retrieval.
+
+For Intermediates:
+- Contruct the knowledge graph from the raw data. Enrich the knowledge graph with data from other sources.
+- Build a RAG system using the PostgreSQL database in which the knowledge graph and auxiliary information are stored in the tables.
+- Use the KG to regulate the RAG system.
+
+For Advanced Users:
+- Generate the knowledge graph and RAG system from the raw data using their own methods.
+- Focus on the KG quality and conduct comprehensive evaluation.
+- Deliver insights of the domain, instead of continuing the data processing pipeline. Try to find the potential research gaps and conduct social determinants analysis.
+
 
 ## Project Overview
 
-![Project overview diagram](media/overview1.png)
+Instead of a single dataset, RuralKG is dedicated to providing reliable and reusable datasets for all the components of the RuralKG pipeline. Datasets from different layers represent different aspects and readiness of the knowledge representation.
 
+1. **Extended Variable List:**  
+   Raw data from federal codebooks (e.g., NSDUH) is processed into an extended CSV format, capturing rich, structured information. This approach utilizes the structure of the codebooks that the most vital variable section in the codebook is organized in a table-like pattern.
+
+   The scripts and methods for the extended CSV generation are available at [beginner-pdf-parsing](02-beginner-pdf-parsing.md).
+
+   One generated extended CSV file for NSDUH 2022 codebook is available at [ndsuh_2022_codebook.csv](data/nsduh_2022_codebook.csv).
+
+2. **Ontology & Knowledge Graph:**  
+   The CSV data is used to build an ontology and a comprehensive knowledge graph that interconnects disparate data sources. 
+
+   The scripts and methods for the ontology and knowledge graph construction are available at [03-ontology-construction](03-intermediate-ontology-construction.md).
+
+   The generated RuralKG is submitted to the FRINK platform for the public use. You can find the RuralKG on the FRINK platform at [Query on FRINK](https://frink.apps.renci.org/?query=PREFIX+rdf:+%3Chttp://www.w3.org/1999/02/22-rdf-syntax-ns%23%3E%0APREFIX+rdfs:+%3Chttp://www.w3.org/2000/01/rdf-schema%23%3E%0ASELECT+*+WHERE+{%0A++?sub+?pred+?obj+.%0A}+LIMIT+10&sources=federation).
+
+   You can also download the current TTL version of RuralKG from this maintained link [RuralKG](data/rural_kg.ttl).
+
+   For users who prefer to use Neo4j, instead of RDF format and SPARQL queries, the Neo4j database dump for the seed ontology can be found at [RuralKG Neo4j Seed](data/nsduh.dump). This seed ontology is not complete, but it can be used as a starting point for building a knowledge graph.
+
+3. **Database Integration:**  
+   Since heterogeneous data sources are involved for providing comprehensive contextual information, a relational database is used to manage both intermediate and final data effectively. 
+
+   The RuralKG database provides a comprehensive data infrastructure for advanced users to build kinds of systems, including RAG, data mining, and social determinants analysis.
+
+   The scripts and methods for the database integration are available at [04-advanced-knowledge-graph-database](04-advanced-knowledge-graph-database.md).
+
+4. **RAG System Deployment:**  
+   All the processed materials support a retrieval-augmented generation system, facilitating intelligent query responses and data exploration for both academic research and public service applications.
+
+![Project overview diagram](media/DCL.png)
 
 ## Alpha Version Demo
 
 An alpha version of the RuralKG Web Service is available at [RuralKG Web Service](http://52.170.155.134:8050/).
 
-In this version, you can explore:
-- **Knowledge queries** for dataset background information,
-- **Data queries** on substances and substance-related data, and
-- **Service queries** for Mental Health Treatment Facilities provided by SAMHSA.
+In this demo, you can explore:
+- **Knowledge Queries:** Retrieve background information and insights about the dataset components.
+- **Data Queries:** Access detailed data on substances and related metrics.
+- **Service Queries:** Find mental health treatment facilities and other public service providers in rural areas.
 
-Test cases can be accessed at [RuralKG Test Cases](data/test_case.csv). Note that some queries may appear unusual as they are designed to test the boundaries of the system’s capabilities.
-
-
-
-
+Test cases and further documentation are available at [RuralKG Test Cases](data/test_case.csv).
