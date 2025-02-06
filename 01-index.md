@@ -25,6 +25,19 @@ Practitioners with some experience in knowledge graphs and RAG systems.
 Researchers familiar with knowledge graphs and RAG who aim to develop custom methodologies, evaluate the quality of the knowledge graph, and derive domain insights.
 - **Use Case:** Generate a custom knowledge graph and RAG system from raw data, conduct comprehensive evaluations of KG quality, derive domain insights, and identify research gaps in social determinants analysis.
 
+## About the Data Sources
+
+RuralKG utilizes datasets published by Federal organizations and agencies, primarily focusing on two types: surveys and reports. A key example is the National Survey on Drug Use and Health (NSDUH) by the Substance Abuse and Mental Health Services Administration (SAMHSA). Each annual NSDUH release includes:
+
+1. A formatted dataset containing variables and response data
+2. Documentation explaining:
+   - Variable definitions and answer categories
+   - Background information
+   - Methodology
+   - Data collection procedures
+
+The survey questions within these datasets are particularly valuable, as they contain rich concepts, terminology, and relationships that form the foundation of our ontology. This ontology then enables us to populate the knowledge graph with structured data from the datasets.
+
 ## Project Overview
 
 RuralKG is designed as a layered ecosystem, offering reusable datasets for every stage of the data processing pipeline:
