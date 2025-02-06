@@ -48,7 +48,7 @@ RuralKG is designed as a layered ecosystem, offering reusable datasets for every
    - **What:** Raw data from federal codebooks (e.g., NSDUH) is processed into an extended CSV format that captures detailed, structured information.
    - **Resources:**  
      - [CSV Generation Scripts & Methods](02-beginner-pdf-parsing.md)  
-     - Example: [NSDUH 2022 Codebook CSV](data/nsduh_2022_codebook.csv)
+     - Example: [NSDUH 2022 Extended Variable List](data/nsduh_2022_codebook.csv)
 
 2. **Ontology & Knowledge Graph**  
    - **What:** The extended CSV is used to construct an ontology and a comprehensive knowledge graph that interconnects disparate data sources.
