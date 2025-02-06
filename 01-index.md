@@ -36,6 +36,8 @@ RuralKG utilizes datasets published by Federal organizations and agencies, prima
    - Methodology
    - Data collection procedures
 
+![NSDUH Resources](media/nsduh.png)
+
 The survey questions within these datasets are particularly valuable, as they contain rich concepts, terminology, and relationships that form the foundation of our ontology. This ontology then enables us to populate the knowledge graph with structured data from the datasets.
 
 ## Project Overview
